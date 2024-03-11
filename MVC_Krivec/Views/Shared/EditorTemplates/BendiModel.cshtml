@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<script>
+    $(function () {
+        // Create a slider element and append it to the DOM
+        var slider = $("<div>").slider({
+            range: "min",
+            value: 0,
+            min: 1950,
+            max: 2023,
+            slide: function (event, ui) {
+                // Update the textbox value when the slider is moved
+                $("#LetoUstanovitve").val(ui.value);
+            }
+        });
+        // Append the slider element to the DOM
+        $("#LetoUstanovitve").after(slider);
+    });
+</script>
+
+@model Bend
+<form method="post" action="@Url.Action("DodajBend")" style="border: 1px solid black; padding: 10px;">
+    <div class="form-group">
+        @Html.EditorFor(model => model.naziv, new { htmlAttributes = new { @class = "form-control", placeholder = "Naziv" } })
+        @Html.ValidationMessageFor(model => model.naziv, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.EditorFor(model => model.drzava, new { htmlAttributes = new { @class = "form-control", placeholder = "Drzava" } })
+        @Html.ValidationMessageFor(model => model.drzava, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LetoUstanovitve, htmlAttributes: new { @class = "control-label" })
+        <br />
+        @Html.EditorFor(model => model.LetoUstanovitve, new { htmlAttributes = new { @class = "form-control", placeholder = "Leto Ustanovitve" } })
+        @Html.ValidationMessageFor(model => model.LetoUstanovitve, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.EditorFor(model => model.TurnejaTK, new { htmlAttributes = new { @class = "form-control", placeholder = "Turneja TK" } })
+        @Html.ValidationMessageFor(model => model.TurnejaTK, "", new { @class = "text-danger" })
+    </div>
+    <br />
+        <button type="submit">Dodaj Bend</button>
+    
+</form>
+

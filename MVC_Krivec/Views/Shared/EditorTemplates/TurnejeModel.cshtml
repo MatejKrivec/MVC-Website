@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Turneje
+
+    
+
+<form method="post" action="@Url.Action("DodajTurnejo")" style="border: 1px solid black; padding: 10px;">
+    <div class="form-group">
+        @Html.EditorFor(model => model.turneja, new { htmlAttributes = new { @class = "form-control", placeholder = "Turneja" } })
+        @Html.ValidationMessageFor(model => model.turneja, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.EditorFor(model => model.clani, new { htmlAttributes = new { @class = "form-control", placeholder = "Ime benda" } })
+        @Html.ValidationMessageFor(model => model.clani, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.EditorFor(model => model.bendi, new { htmlAttributes = new { @class = "form-control", placeholder = "Clani Benda" } })
+        @Html.ValidationMessageFor(model => model.bendi, "", new { @class = "text-danger" })
+    </div>
+
+        <button type="submit">Dodaj turnejo</button>
+    
+</form>
+
+
+

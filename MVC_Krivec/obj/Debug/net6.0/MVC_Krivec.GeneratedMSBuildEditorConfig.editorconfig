@@ -1,0 +1,179 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MVC_Krivec
+build_property.RootNamespace = MVC_Krivec
+build_property.ProjectDir = C:\Users\Matej\Desktop\MVC_Krivec\MVC_Krivec\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Matej\Desktop\MVC_Krivec\MVC_Krivec
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/Bendi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCZW5kaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/Clani.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDbGFuaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/Dodaj.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2Rhai5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/EditBand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0QmFuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/EditClan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0Q2xhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/EditTurneja.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0VHVybmVqYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/IzpisPoljubnegaElementa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJenBpc1BvbGp1Ym5lZ2FFbGVtZW50YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/IzpisPoljubnegaElementa2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJenBpc1BvbGp1Ym5lZ2FFbGVtZW50YTIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/IzpisPoljubnegaElementa3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJenBpc1BvbGp1Ym5lZ2FFbGVtZW50YTMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/IzpisPoljubnegaElementa4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJenBpc1BvbGp1Ym5lZ2FFbGVtZW50YTQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Home/Turneje.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUdXJuZWplLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Merch/Hvala.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVyY2hcSHZhbGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Merch/Kosarica.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVyY2hcS29zYXJpY2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Merch/Merchendise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVyY2hcTWVyY2hlbmRpc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Merch/PotrditevNakupa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVyY2hcUG90cmRpdGV2TmFrdXBhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Merch/PretekliNakupi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVyY2hcUHJldGVrbGlOYWt1cGkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Registracija/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmFjaWphXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Registracija/PodatkiRegistracije.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmFjaWphXFBvZGF0a2lSZWdpc3RyYWNpamUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Registracija/Registracija.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmFjaWphXFJlZ2lzdHJhY2lqYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/DisplayTemplates/Bendi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcQmVuZGkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/DisplayTemplates/Clani.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcQ2xhbmkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/DisplayTemplates/Izpis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcSXpwaXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/DisplayTemplates/Podatek.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcUG9kYXRlay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/DisplayTemplates/PodatkiPodatka.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcUG9kYXRraVBvZGF0a2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/DisplayTemplates/PodatkiPodatka2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcUG9kYXRraVBvZGF0a2EyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/DisplayTemplates/PodatkiPodatka3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcUG9kYXRraVBvZGF0a2EzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/DisplayTemplates/Turneje.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcVHVybmVqZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/EditorTemplates/BendiEditor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xCZW5kaUVkaXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/EditorTemplates/BendiModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xCZW5kaU1vZGVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/EditorTemplates/ClaniEditor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDbGFuaUVkaXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/EditorTemplates/ClaniModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDbGFuaU1vZGVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/EditorTemplates/RegisterModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xSZWdpc3Rlck1vZGVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/EditorTemplates/TurnejeEditor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xUdXJuZWplRWRpdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/EditorTemplates/TurnejeModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xUdXJuZWplTW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matej/Desktop/MVC_Krivec/MVC_Krivec/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,199 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Uporabnik_z_Gesli
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Tabs - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <!--<script>
+    $(function () {
+    $("#BD").datepicker();
+    });
+    </script>-->
+   <!--<script>
+        $(function () {
+            $("#RojstniDan").datepicker({
+                dateFormat: 'mm/dd/yy',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '1900:' + currentYear
+                minDate: new Date(1900, 1, 1),
+                maxDate: '-1d'
+            });
+        });
+    </script>--> 
+    <script>
+        $(function () {
+            $("#slider-3").slider({
+                range: true,
+                min: 0,
+                max: 100,
+                values: [0, 0],
+                slide: function (event, ui) {
+                    $("#starost").val(ui.values[0] + ui.values[1]);
+                }
+            });
+
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+
+    <script>
+        $(function () {
+            // Create a slider element and append it to the DOM
+            var slider = $("<div>").slider({
+                range: "min",
+                value: 0.00,
+                min: 0.00,
+                max: 9999.00,
+                step: 0.01,
+                slide: function (event, ui) {
+                    // Update the textbox value when the slider is moved
+                    $("#PostnaST").val(ui.value.toFixed(2));
+                }
+            });
+            // Append the slider element to the DOM
+            $("#PostnaST").after(slider);
+        });
+    </script>
+    <script>
+        $(function () {
+            // Create a slider element and append it to the DOM
+            var slider = $("<div>").slider({
+                range: "min",
+                value: 0,
+                min: 0,
+                max: 123,
+                slide: function (event, ui) {
+                    // Update the textbox value when the slider is moved
+                    $("#starost").val(ui.value);
+                }
+            });
+            // Append the slider element to the DOM
+            $("#starost").after(slider);
+        });
+    </script>
+
+
+
+</head>
+<body>
+    <form method="post" action="@Url.Action("Registracija")" >
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Personal data</a></li>
+                <li><a href="#tabs-2">Adress</a></li>
+                <li><a href="#tabs-3">Password and Email</a></li>
+            </ul>
+            <div id="tabs-1" style="background-color: gray">
+                <div class="form-group">
+
+                    @Html.EditorFor(model => model.Ime, new {htmlAttributes = new { @class = "form-control", placeholder = "Ime" }})
+                    @Html.ValidationMessageFor(model => model.Ime, "", new { @class = "text-danger" })
+                </div><br />
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Priimek, new {htmlAttributes = new{ @class = "form-control", placeholder = "Priimek",  }})
+                    @Html.ValidationMessageFor(model => model.Priimek, "", new { @class = "text-danger" })
+                </div><br />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RojstniDan, "Rojstni dan", new { @class = "control-label" })
+                    <br />
+                    @Html.EditorFor(model => model.RojstniDan, new { htmlAttributes = new { @class = "form-control", placeholder = "Rojstni dan", type = "date", min = "1900-01-01", max = DateTime.Now.ToString("yyyy-MM-dd") } })
+                    @Html.ValidationMessageFor(model => model.RojstniDan, "", new { @class = "text-danger" })
+                </div>
+                <br />
+                <div class="form-group">
+                    @Html.EditorFor(model => model.EMSO, new {htmlAttributes = new{ @class = "form-control", placeholder = "EMSO",}})
+                    @Html.ValidationMessageFor(model => model.EMSO, "", new { @class = "text-danger" })
+                </div>
+                <br />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.starost, "starost", new { @class = "control-label" })
+                    <br />
+                    @Html.EditorFor(model => model.starost, new {htmlAttributes = new{ @class = "form-control", placeholder = "Starost" , }})
+                    @Html.ValidationMessageFor(model => model.starost, "", new { @class = "text-danger" })
+                </div>
+                <br />
+                <div class="form-group">
+                    @Html.DropDownListFor(model => model.KrajRojstva, new SelectList(new[] { "Maribor","Ljubljana","Celje", "Velenje", "Mozirje" }), "-Izberi kraj rojstva-", new { @class = "form-control", required = "required", })
+                    @Html.ValidationMessageFor(model => model.KrajRojstva, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div id="tabs-2" style="background-color: gray">
+                <div class="form-group">
+                    @Html.EditorFor(model => model.naslov, new {htmlAttributes = new{ @class = "form-control", placeholder = "Naslov",  }})
+                    @Html.ValidationMessageFor(model => model.naslov, "", new { @class = "text-danger" })
+                </div><br />
+                <div class="form-group">
+                @Html.LabelFor(model => model.PostnaST, "Postna stevilka", new { @class = "control-label" })
+                    <br />
+                    @Html.EditorFor(model => model.PostnaST, new {htmlAttributes = new{ @class = "form-control", placeholder = "Poštna številka" ,}})
+                    @Html.ValidationMessageFor(model => model.PostnaST, "", new { @class = "text-danger" })
+                </div><br />
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Posta, new {htmlAttributes = new{ @class = "form-control", placeholder = "Pošta",  }})
+                    @Html.ValidationMessageFor(model => model.Posta, "", new { @class = "text-danger" })
+                </div><br />
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Drzava, new {htmlAttributes = new{ @class = "form-control", placeholder = "Država", }})
+                    @Html.ValidationMessageFor(model => model.Drzava, "", new { @class = "text-danger" })
+                    
+                </div>
+            </div>
+
+
+            <div id="tabs-3" style="background-color: gray">
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Email, new {htmlAttributes = new{ @class = "form-control", placeholder = "Email" , } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div><br />
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Geslo, new {htmlAttributes = new{ @class = "form-control", type = "password", placeholder = "Geslo" }})
+                    @Html.ValidationMessageFor(model => model.Geslo, "", new { @class = "text-danger" })
+                </div><br />
+                <div class="form-group">
+                    @Html.EditorFor(model => model.ConfirmPassword, new  {htmlAttributes = new { @class = "form-control", type = "password", placeholder = "Ponovi geslo" }})
+                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="Role" value="User" />
+                    <!-- your other form fields here -->
+                </div>
+               
+            </div>
+        </div>
+        <br />
+        <input type="submit" value="Submit" />
+
+        </form>
+       
+
+</body>
+</html>

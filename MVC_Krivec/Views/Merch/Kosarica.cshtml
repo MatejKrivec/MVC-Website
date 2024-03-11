@@ -1,0 +1,176 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    var counter = 1;
+
+}
+@model List<Merch>
+
+<h1>Shopping Cart</h1>
+
+@if (Model.Count == 0)
+{
+    <p>Your shopping cart is empty.</p>
+}
+else
+{
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        input[type="number"] {
+            width: 50px;
+        }
+
+        #total-price {
+            font-weight: bold;
+        }
+
+        .remove-btn {
+            background-color: gray;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Št</th>
+                <th>Naziv</th>
+                <th>Cena</th>
+                <th>Količina</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@counter</td>
+                    <td>@item.naziv</td>
+                    <td>@item.cena</td>
+                    <td><input type="number" id="quantity-@item.Id" name="quantity" min="1" max="100" value="1"></td>
+                    <td><button class="remove-btn" data-item-id="@item.Id">Remove</button></td>
+                </tr>
+                counter++;
+            }
+        </tbody>
+    </table>
+
+    <div>
+        <span>Total:</span>
+        <span id="total-price"></span>
+    </div>
+    <br />
+    <br />
+
+    @using (Html.BeginForm("PotrditevNakupa", "Merch"))
+    {
+        <input type="hidden" id="items-quantities" name="items-quantities" value="" />
+        <input type="hidden" id="Cena" name="totalPrice" value="" />
+        <input type="submit" value="Nakup" />
+    }
+}
+
+<script>
+    const quantityInputs = document.querySelectorAll('input[id^="quantity-"]');
+    const removeButtons = document.querySelectorAll('.remove-btn');
+    let totalPrice = 0;
+
+    const itemQuantities = [];
+
+    quantityInputs.forEach(input => {
+        const item = input.parentNode.previousElementSibling.previousElementSibling.textContent.trim();
+        const quantity = input.value;
+        itemQuantities.push(`${item} ${quantity}xx`);
+    });
+
+    document.querySelector('#items-quantities').value = itemQuantities.join(', ');
+
+    quantityInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            calculateTotalPrice();
+        });
+    });
+
+    removeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const itemId = button.getAttribute('data-item-id');
+            const price = parseFloat(button.parentNode.previousElementSibling.textContent);
+            removeItemFromCart(itemId, price);
+            button.closest('tr').remove();
+            totalPrice -= price;
+            calculateTotalPrice();
+        });
+    });
+
+    const totalPriceSpan = document.querySelector('#total-price');
+    const totalPriceInput = document.querySelector('#Cena');
+
+    function calculateTotalPrice() {
+        totalPrice = 0;
+        quantityInputs.forEach(input => {
+            totalPrice += input.value * parseFloat(input.parentNode.previousElementSibling.textContent);
+        });
+        totalPriceSpan.textContent = totalPrice.toFixed(2);
+        totalPriceInput.value = totalPrice;
+    }
+
+    function removeItemFromCart(itemId, price) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', `/Merch/RemoveItemFromCart?itemId=${itemId}`);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                // Remove the item from the table
+                const row = document.querySelector(`tr[data-item-id="${itemId}"]`);
+                if (row) {
+                    row.remove();
+                }
+                // Subtract the item value from the total price
+                totalPrice -= price;
+                // Update the total price display
+                const totalPriceSpan = document.querySelector('#total-price');
+                const totalPriceInput = document.querySelector('#Cena');
+                totalPriceSpan.textContent = totalPrice.toFixed(2);
+                totalPriceInput.value = totalPrice.toFixed(2);
+                // Reload the page to update the view
+                location.reload();
+            } else {
+                console.error('Error removing item from cart:', xhr.responseText);
+            }
+        };
+        xhr.send();
+    }
+
+    calculateTotalPrice();
+    console.log(totalPrice);
+    console.log(totalPriceInput.value);
+</script>
+
+
+
+
+
+

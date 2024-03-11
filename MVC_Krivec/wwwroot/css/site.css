@@ -1,0 +1,99 @@
+
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+}
+
+
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    width: 98%;
+    text-align: center;
+}
+nav a {
+   float: left;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+}
+nav .float-right {
+   float: right;
+}
+nav a:hover {
+    background-color: lightskyblue;
+}
+/*.navigacija {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+.navigacija a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navigacija a:hover {
+     background-color: lightskyblue;
+}*/
+
+
+
+
+#content {
+    height: fit-content;
+    max-inline-size: fit-content;
+    text-align: center;
+    color: black;
+    width: 100%;
+}
+body {
+    margin-bottom: 10px;
+    background-color: lightpink;
+    color: black;
+    min-height: 340px;
+    height: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+footer {
+    color: black;
+    border-top: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+    text-align: center;
+}
+footer h6 {
+     float: left;
+}
+footer p{
+    float: right;
+}
+
+.forma {
+    border: 2px solid;
+    padding: 20px;
+    margin: 20px;
+    background-color: lightpink;
+}
+
+
+
+
+
+
+

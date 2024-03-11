@@ -1,0 +1,77 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+    </head>
+
+    <body class="telo">
+        
+            <header>
+                <nav>
+                    <a href="/Home/Index">Home</a>
+                    @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "Admin" || HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "User")
+                    {
+                    <a href="/Home/Clani">Clani</a>
+                    <a href="/Home/Bendi">Bendi</a>
+                    <a href="/Home/Turneje">Turneje</a>
+                <a href="/Merch/Merchendise">Merch</a>
+                <a href="/Merch/PretekliNakupi">Pretekli nakupi</a>
+                    }
+
+            
+                    @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "Admin")
+                    {
+                    <a href="/Home/Dodaj">Dodaj</a>
+                    }
+                    <a class="float-right" href="/Registracija/Login">Login</a>
+                    <a class="float-right" href="/Registracija/Registracija">Register</a>
+                     @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "Admin" || HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "User")
+                     {
+                <a class="float-right" href="/Merch/Kosarica">Kosarica</a>
+                     }
+                </nav>
+            </header>
+
+        <center>
+
+        <div>
+            <table id="content">
+                <tr>
+                    <td>@RenderBody()</td>
+                    
+                </tr>
+            </table>
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+            }
+        </div>
+            
+        </center>
+
+      
+        <br />
+        <footer>
+                <h6>Made by Matej Krivec</h6>
+                <p id="txt">...</p>
+        </footer>
+
+    <script>
+        function refreshTime() {
+            const timeDisplay = document.getElementById("txt");
+            const dateString = new Date().toLocaleString();
+            const formattedString = dateString.replace(", ", " - ");
+            timeDisplay.textContent = formattedString;
+        }
+        setInterval(refreshTime, 1000);
+    </script>
+
+    @RenderSection("scripts", required: false)
+    
+    </body>
+</html>
+
+

@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model NarocanjeMercha
+
+<h1>Potrditev nakupa.</h1>
+
+<style>
+    form {
+        border: 1px solid black;
+        padding: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    
+    #naziv {
+        width: 100%;
+    }
+
+</style>
+
+<h2>Confirmation</h2>
+
+@inject IHttpContextAccessor HttpContextAccessor
+
+<form action="/api/NarocanjeMercha/Create" method="post" id="myForm">
+
+    <div>
+        <input type="hidden" id="tkUser" name="tkUser" value="@HttpContextAccessor.HttpContext.Session.GetInt32("UserId")" />
+    </div>
+
+    <div>
+        <label for="naziv">Naziv:</label>
+        <input type="text" id="naziv" name="naziv" value="@Model.naziv" readonly style="width: 350px;">
+    </div>
+
+    <div>
+        <label for="cena">Cena:</label>
+        <input type="text" id="cena" name="cena" value="@Model.cena" readonly>
+    </div>
+
+    <div>
+        <label for="kraj">Kraj:</label>
+        <input type="text" id="kraj" name="kraj">
+    </div>
+
+    <div>
+        <label for="posta">Poštna številka:</label>
+        <input type="number" id="posta" name="posta">
+    </div>
+
+    <div>
+        <label for="naslov">Naslov:</label>
+        <input type="text" id="naslov" name="naslov">
+    </div>
+
+    <input type="submit" value="Potrdi">
+</form>
+
+
+

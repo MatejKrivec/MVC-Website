@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Bend
+
+
+<form method="post" asp-action="SaveEditedBand" asp-route-newNaziv="@Model.naziv">
+    <div>
+        <label>Naziv:</label>
+        <input type="text" asp-for="naziv" readonly />
+    </div>
+    <label>New Naziv:</label>
+        <input type="text" name="newNaziv" />
+    <div>
+        <label>Država:</label>
+        <input type="text" asp-for="drzava" />
+    </div>
+    <div>
+        <label>Leto ustanovitve:</label>
+        <input type="number" asp-for="LetoUstanovitve" />
+    </div>
+    <div>
+        <label>turnejaTK:</label>
+        <input type="number" asp-for="TurnejaTK" />
+    </div>
+    <div>
+        <button type="submit">Save Changes</button>
+    </div>
+</form>

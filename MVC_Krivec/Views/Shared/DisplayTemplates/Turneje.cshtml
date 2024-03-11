@@ -1,0 +1,94 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Turneje>
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Turneje</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#accordion-2").accordion({
+                collapsible: true
+            });
+        });
+    </script>
+
+    <style>
+        #accordion-2 {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Turneje</h1>
+    <div id="accordion-2">
+        @foreach (var turneja in Model)
+        {
+            <p>@turneja.turneja</p>
+            <div>
+                <p>Ime benda: @turneja.clani</p>
+                <p>Clani Benda: @turneja.bendi</p>
+                @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "Admin")
+                {
+                    <p>
+                        <button onclick="deleteTurneja('@turneja.turneja')">Delete</button>
+                    </p>
+                    <p>
+                        <button onclick="editTurneja('@turneja.turneja')">Edit</button>
+                    </p>
+                }
+                <p>
+                    <button onclick="showDetails('@turneja.turneja')">Izpis podatkov</button>
+                </p>
+            </div>
+        }
+    </div>
+</body>
+
+
+</html>
+
+
+    <script>
+        function showDetails(ime) {
+            
+            window.location.href = '@Url.Action("Details3", "Home")?ime=' + ime;
+        }
+    </script>
+
+<script>
+    function editTurneja(naziv) {
+        window.location.href = '@Url.Action("EditTurneja", "Home")?naziv=' + encodeURIComponent(naziv);
+    }
+</script>
+
+<script>
+    function deleteTurneja(name) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("DeleteTurneja", "Home")',
+            data: { name: name },
+            success: function (response) {
+                location.reload();
+            },
+            error: function () {
+                alert("Error deleting turneja.");
+            }
+        });
+    }
+</script>

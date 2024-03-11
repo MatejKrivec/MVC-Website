@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Bend>
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bandi</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#accordion-2").accordion({
+                collapsible: true
+            });
+        });
+    </script>
+
+    <style>
+        #accordion-2 {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Bandi</h1>
+
+    <div id="accordion-2">
+        @foreach (var bend in Model)
+        {
+            <p>@bend.naziv    </p>
+            <div>
+                <p>Drzava: @bend.drzava</p>
+                <p>Leto ustanovitve: @bend.LetoUstanovitve</p>
+                @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "Admin")
+                {
+                    <p>
+                        <button onclick="deleteBand('@bend.naziv')">Delete</button>
+                    </p>
+                    <p>
+                        <button onclick="editBand('@bend.naziv')">Edit</button>
+                    </p>
+                }
+                <p>
+                    <button onclick="showDetails('@bend.naziv')">Izpis podatkov</button>
+                </p>
+            </div>
+        }
+    </div>
+</body>
+
+
+
+    <script>
+        function showDetails(ime) {
+            
+            window.location.href = '@Url.Action("Details", "Home")?ime=' + ime;
+        }
+    </script>
+
+<script>
+    function editBand(naziv) {
+        window.location.href = '@Url.Action("EditBand", "Home")?naziv=' + encodeURIComponent(naziv);
+    }
+</script>
+
+<script>
+    function deleteBand(name) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("DeleteBand", "Home")',
+            data: { name: name },
+            success: function (response) {
+                location.reload();
+            },
+            error: function () {
+                alert("Error deleting band.");
+            }
+        });
+    }
+</script>
+

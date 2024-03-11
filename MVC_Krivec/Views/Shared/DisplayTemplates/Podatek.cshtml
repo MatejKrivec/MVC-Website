@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Clan>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function showDetails(ime) {
+            
+            window.location.href = '@Url.Action("Details", "Home")?ime=' + ime;
+        }
+    </script>
+
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome @ViewBag.Ime!</h1>
+        <p>MVC za upravljanje rock bendov</p>
+    </div>
+
+
+    
+</body>
+</html>

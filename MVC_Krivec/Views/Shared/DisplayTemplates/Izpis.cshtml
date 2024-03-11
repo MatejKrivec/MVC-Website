@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+   /* double myDouble = Model.PostnaST;
+    string myString = myDouble.ToString("0.00"); // convert to string with two decimal places
+    string result = $"{myString[..^2]},{myString[^2..]}"; // separate last two characters with a comma
+    */
+
+}
+
+
+
+
+<h1>Koncni podatki registracije</h1>
+
+@model Uporabnik_z_Gesli
+@using System.Globalization
+
+<h1>Registracijski podatki:</h1>
+
+<p>Ime: @Model.Ime</p>
+<p>Priimek: @Model.Priimek</p>
+<p>Rojstni dan: @Model.RojstniDan</p>
+<p>EMŠO: @Model.EMSO</p>
+<p>Starost: @Model.starost</p>
+<p>Kraj Rojstva: @Model.KrajRojstva</p>
+
+<h1>Naslov:</h1>
+
+<p>Naslov: @Model.naslov</p>
+
+<p>Pošta: @Model.Posta</p>
+<p>Poštna številka: @Model.PostnaST</p>
+
+<p>Država: @Model.Drzava</p>
+
+<h1>Kontaktni podatki:</h1>
+
+<p>E-pošta: @Model.Email</p>
+<p>Geslo: @Model.Geslo</p>
+
+
+
+<form method="get" action="@Url.Action("Index", "Home")">
+    <input type="submit" value="Submit" />
+</form>

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Dodaj";
+}
+@model Clan
+
+<h1>Dodaj</h1>
+<br />
+<p>Dodajanje turnej</p>
+    @Html.EditorForModel("TurnejeModel")
+    <br />
+<p>Dodajanje clanov</p>
+    @Html.EditorForModel("ClaniModel")
+    <br />
+<p>Dodajanje bendov</p>
+    @Html.EditorForModel("BendiModel")

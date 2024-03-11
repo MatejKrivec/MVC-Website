@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Pretekli nakupi</h1>
+
+@model IEnumerable<NarocanjeMercha>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Naziv</th>
+            <th>Cena</th>
+            <th>Kraj</th>
+            <th>Posta</th>
+            <th>Naslov</th>
+            <th>DatumInCas</th>
+            <th>TK_User</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.naziv</td>
+                <td>@item.cena</td>
+                <td>@item.kraj</td>
+                <td>@item.posta</td>
+                <td>@item.naslov</td>
+                <td>@item.DatumInCas</td>
+                <td>@item.TK_User</td>
+            </tr>
+        }
+    </tbody>
+</table>
